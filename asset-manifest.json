@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Popol2411/meet/static/css/main.073c9b0a.css",
+    "main.js": "/Popol2411/meet/static/js/main.411e97b5.js",
+    "static/js/377.dda790c9.chunk.js": "/Popol2411/meet/static/js/377.dda790c9.chunk.js",
+    "service-worker.js": "/Popol2411/meet/service-worker.js",
+    "static/media/logo.svg": "/Popol2411/meet/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/Popol2411/meet/index.html",
+    "main.073c9b0a.css.map": "/Popol2411/meet/static/css/main.073c9b0a.css.map",
+    "main.411e97b5.js.map": "/Popol2411/meet/static/js/main.411e97b5.js.map",
+    "377.dda790c9.chunk.js.map": "/Popol2411/meet/static/js/377.dda790c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.411e97b5.js"
+  ]
+}
