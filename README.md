@@ -1,5 +1,7 @@
 # meet
 
+Meet is an application for users to find events based on their location. It will be a serverless progressive web application(PWA) using React and built using the test-driven development(TDD) technique. The app will be utilizing Google Calendar API.
+
 FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS
 
 As a user,
