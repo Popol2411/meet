@@ -10,7 +10,8 @@ So that I can see or hide the event´s details
 
 Scenario 1: An event element is collapsed by default
 
--
+Given the user has not selected a location or specified a number,
+Then the event element is collapsed by default
 
 Scenario 2: User can expand an event to see its details
 
@@ -33,7 +34,9 @@ So that I can see the amount of events
 
 Scenario 1: When user hasn’t specified a number, 32 is the default number
 
--
+Given the user hasn´t specified a number,
+And the default number is displayed,
+Then the number 32 shall be displayed
 
 Scenario 2: User can change the number of events they want to see
 
