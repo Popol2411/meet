@@ -75,8 +75,7 @@
       const getTokenRequest = getToken + "/" + code;
       fetch(getTokenRequest)
         .then(function (response) {
-          return
-          response.json();
+          return response.json();
         })
 
         .then(function (json) {
