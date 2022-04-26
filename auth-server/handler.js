@@ -144,7 +144,7 @@ module.exports.getCalendarEvents = event => {
         headers: {
           'Acces-Control-Allow-Origin': '*',
         },
-        body: JSON.stringify({ events: results.data.items })
+        body: JSON.stringify({ events: results.data.items }),
       };
     })
     .catch(error => {
@@ -157,5 +157,5 @@ module.exports.getCalendarEvents = event => {
       };
     });
 
-}
+};
 
