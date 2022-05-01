@@ -59,5 +59,28 @@ describe('<App /> component', () => {
     AppWrapper.unmount();
   });
 
+  test('App passes "locations" state as a prop to CitySearch', () => {
+    const AppWrapper = mount(<App />);
+    const AppLocationsState = AppWrapper.state('locations');
+    expect(AppLocationsState).not.toEqual(undefined);
+    expect(AppWrapper.find(CitySearch).props().locations).toEqual(AppLocationsState);
+    AppWrapper.unmount();
+  });
+
+  test('pass number of events as 32 per default', () => {
+    const AppWrapper = mount(<App />);
+    const NumberOfEventsState = AppWrapper.state('numberOfEvents');
+    expect(NumberOfEventsState).not.toEqual(undefined);
+    expect(AppWrapper.find(NumberOfEvents).props().numberOfEvents).toEqual(32);
+    AppWrapper.unmount();
+  })
+
+  test('change numberOfEvents state when NumberOfEvents changes', async () => {
+    const AppWrapper = mount(<App />);
+    AppWrapper.find('.number-of-events').simulate('change', { target: { value: 12 } });
+    expect(AppWrapper.state('numberOfEvents')).toEqual(12);
+    AppWrapper.unmount();
+  })
+
 });
 
