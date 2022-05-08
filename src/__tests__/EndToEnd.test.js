@@ -14,7 +14,7 @@ describe('show/hide an event details', () => {
 
     await page.waitForSelector('.event');
 
-    const eventDetails = await page.$('.event .extra-details show');
+    const eventDetails = await page.$('.event .extra-details');
     expect(eventDetails).toBeNull();
     browser.close();
   });
