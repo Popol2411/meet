@@ -24,7 +24,7 @@ describe('show/hide an event details', () => {
     const eventDetails = await page.$('.event .extra-details');
     expect(eventDetails).toBeNull();
 
-  });
+  }); 
 
   test('User can expand an event to see its details', async () => {
 
