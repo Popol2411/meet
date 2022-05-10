@@ -22,11 +22,7 @@ defineFeature(feature, (test) => {
     });
   });
 
-  test('User can expand an event to see its details', ({
-    given,
-    when,
-    then,
-  }) => {
+  test('User can expand an event to see its details', ({ given, when, then }) => {
     given('the user is displayed with a list of events', async () => {
       AppWrapper = await mount(<App />);
     });
@@ -42,11 +38,7 @@ defineFeature(feature, (test) => {
     });
   });
 
-  test('User can collapse an event to hide its details', ({
-    given,
-    when,
-    then,
-  }) => {
+  test('User can collapse an event to hide its details', ({ given, when, then }) => {
     given('The user has clicked on an event to display details', async () => {
       AppWrapper = await mount(<App />);
       AppWrapper.update();
