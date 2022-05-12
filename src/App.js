@@ -54,7 +54,7 @@ class App extends Component {
   }
 
   render() {
- //   console.log(this.state); 
+  //  console.log(this.state.events); 
     return (
       <div className="App">
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
