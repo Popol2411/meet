@@ -5,6 +5,7 @@ class NumberOfEvents extends Component {
 
   state = {
     numberOfEvents: '32',
+    infoText: '',
   };
 
   handleInputChanged = (event) => {
