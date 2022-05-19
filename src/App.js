@@ -6,6 +6,7 @@ import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
 import WelcomeScreen from './WelcomeScreen';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
+import { OfflineAlert } from './Alert';
 
 class App extends Component {
   state = {
@@ -13,7 +14,8 @@ class App extends Component {
     locations: [],
     showWelcomeScreen: undefined,
     numberOfEvents: 32,
-    currentLocation: 'all'
+    currentLocation: 'all',
+    offlineText: '',
   }
 
   updateEvents = (location, numberOfEvents) => {
@@ -55,7 +57,9 @@ class App extends Component {
     if ((code || isTokenValid) && this.mounted) {
       getEvents().then((events) => {
         if (this.mounted) {
-          this.setState({ events, locations: extractLocations(events) });
+          this.setState({ events, locations: extractLocations(events),
+          offlineText: '',
+          });
         }
       });
     }
