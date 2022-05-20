@@ -23,7 +23,7 @@ const getToken = async (code) => {
     .catch((error) => error);
 
   access_token && localStorage.setItem('access_token', access_token);
-
+  console.log(access_token);
   return access_token;
 };
 
