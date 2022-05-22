@@ -70,8 +70,9 @@ class App extends Component {
   }
 
   render() {
-  //  console.log(this.state.events);
+ 
   if (this.state.showWelcomeScreen === undefined) 
+  return <div className="App" />
     return (
       <div className="App">
         <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
