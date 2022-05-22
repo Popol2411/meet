@@ -18,6 +18,38 @@ class App extends Component {
     offlineText: '',
   }
 
+  updateNumberOfEvents = (numberOfEvents) => {
+    this.setState(
+      {
+        numberOfEvents,
+      },
+      this.updateEvents(this.state.location, numberOfEvents)
+    )
+  }
+
+  updateEvents = (location, number = this.state.numberOfEvents) => {
+    getEvents().then((events) => {
+      if (number !== undefined) {
+        this.setState({
+          numberOfEvents: this.state.numberOfEvents,
+        })
+      }
+      // filter event list by location
+      let eventList =
+        location !== 'all'
+          ? events.filter((event) => event.location === location)
+          : events
+
+      // Shorten event list
+      let shortEventList = eventList.slice(0, this.state.numberOfEvents)
+
+      // Assign value to events state, assign currentLocation
+      this.setState({
+        events: shortEventList,
+        currentLocation: location,
+      })
+    })
+  }
 
   async componentDidMount() {
     this.mounted = true
@@ -61,42 +93,9 @@ class App extends Component {
     this.mounted = false;
   }
 
-  updateNumberOfEvents = (numberOfEvents) => {
-    this.setState(
-      {
-        numberOfEvents,
-      },
-      this.updateEvents(this.state.location, numberOfEvents)
-    )
-  }
-
-  updateEvents = (location, number = this.state.numberOfEvents) => {
-    getEvents().then((events) => {
-      if (number !== undefined) {
-        this.setState({
-          numberOfEvents: this.state.numberOfEvents,
-        })
-      }
-      // filter event list by location
-      let eventList =
-        location !== 'all'
-          ? events.filter((event) => event.location === location)
-          : events
-
-      // Shorten event list
-      let shortEventList = eventList.slice(0, this.state.numberOfEvents)
-
-      // Assign value to events state, assign currentLocation
-      this.setState({
-        events: shortEventList,
-        currentLocation: location,
-      })
-    })
-  }
-
 
   render() {
-    const { events, locations, NumberOfEvents, offlineText, showWelcomeScreen } = this.state
+    const { events, locations, offlineText, showWelcomeScreen } = this.state
 
     if (showWelcomeScreen === undefined) return <div className='App' />
 
