@@ -15,42 +15,8 @@ class App extends Component {
     showWelcomeScreen: undefined,
     numberOfEvents: 32,
     currentLocation: 'all',
-    offlineText: '',
-  }
-
-  updateNumberOfEvents = (numberOfEvents) => {
-    this.setState(
-      {
-        numberOfEvents,
-      },
-      this.updateEvents(this.state.location, numberOfEvents)
-    )
-  }
-
-  updateEvents = (location, number = this.state.numberOfEvents) => {
-    getEvents().then((events) => {
-      if (number !== undefined) {
-        this.setState({
-          numberOfEvents: this.state.numberOfEvents,
-        })
-      }
-      // filter event list by location
-      let eventList =
-        location !== 'all'
-          ? events.filter((event) => event.location === location)
-          : events
-
-      // Shorten event list
-      let shortEventList = eventList.slice(0, this.state.numberOfEvents)
-
-      // Assign value to events state, assign currentLocation
-      this.setState({
-        events: shortEventList,
-        currentLocation: location,
-      })
-    })
-  }
-
+     }
+      
   async componentDidMount() {
     this.mounted = true
 
@@ -91,6 +57,39 @@ class App extends Component {
 
   componentWillUnmount() {
     this.mounted = false;
+  }
+
+  updateNumberOfEvents = (numberOfEvents) => {
+    this.setState(
+      {
+        numberOfEvents,
+      },
+      this.updateEvents(this.state.location, numberOfEvents)
+    )
+  }
+
+  updateEvents = (location, number = this.state.numberOfEvents) => {
+    getEvents().then((events) => {
+      if (number !== undefined) {
+        this.setState({
+          numberOfEvents: this.state.numberOfEvents,
+        })
+      }
+      // filter event list by location
+      let eventList =
+        location !== 'all'
+          ? events.filter((event) => event.location === location)
+          : events
+
+      // Shorten event list
+      let shortEventList = eventList.slice(0, this.state.numberOfEvents)
+
+      // Assign value to events state, assign currentLocation
+      this.setState({
+        events: shortEventList,
+        currentLocation: location,
+      })
+    })
   }
 
 
