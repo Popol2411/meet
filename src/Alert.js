@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-export { InfoAlert, ErrorAlert, OfflineAlert };
 
 class Alert extends Component {
   constructor(props) {
@@ -43,3 +42,4 @@ class OfflineAlert extends Alert {
   }
 }
 
+export { InfoAlert, ErrorAlert, OfflineAlert };

@@ -93,34 +93,34 @@ class App extends Component {
     this.mounted = false;
   }
 
-  getData = () => {
-    const { locations, events } = this.state
-    const data = locations.map((location) => {
-      const number = events.filter(
-        (event) => event.location === location
-      ).length
-      const city = location.split(', ').shift()
-      return { city, number }
-    })
-    return data
-  }
 
   render() {
- 
-  if (this.state.showWelcomeScreen === undefined) 
-  return <div className="App" />
+    const { events, locations, offlineText, showWelcomeScreen } = this.state
+
+    if (showWelcomeScreen === undefined) return <div className='App' />
+
     return (
-      <div className="App">
-        <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
-        <EventList events={this.state.events} />
-        <NumberOfEvents numberOfEvents={this.state.numberOfEvents} updateNumberOfEvents={this.updateNumberOfEvents} />
-        <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
-        getAccessToken={() => { getAccessToken() }} />
+      <div className='App'>
+
+        <div className='topBar'>
+          <h4 className='appTitle'>Meet App</h4>
+          <CitySearch locations={locations} updateEvents={this.updateEvents} />
+          <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
+        </div>
+        <OfflineAlert id='OfflineAlert' text={offlineText} />
+
+        <EventList events={events} />
+        <OfflineAlert text={this.state.OfflineAlertText} />
+
+        <WelcomeScreen
+          showWelcomeScreen={this.state.showWelcomeScreen}
+          getAccessToken={() => {
+            getAccessToken()
+          }}
+        />
       </div>
-    );
+    )
   }
 }
 
-
-
-export default App;
+export default App
