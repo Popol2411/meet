@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-export { InfoAlert, ErrorAlert };
+export { InfoAlert, ErrorAlert, OfflineAlert };
 
 class Alert extends Component {
   constructor(props) {
@@ -33,6 +33,13 @@ class ErrorAlert extends Alert {
   constructor(props) {
     super(props);
     this.color = 'red';
+  }
+}
+
+class OfflineAlert extends Alert {
+  constructor(props) {
+    super(props)
+    this.color = 'orange'
   }
 }
 
