@@ -4,6 +4,7 @@ import './nprogress.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import EventGenre from './EventGenre';
 import WelcomeScreen from './WelcomeScreen';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import { OfflineAlert } from './Alert';
@@ -118,7 +119,8 @@ class App extends Component {
           <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
         </div>
         <OfflineAlert id='OfflineAlert' text={offlineText} />
-
+        <div className="data-vis-wrapper">
+        <EventGenre events={events}/>
         <ResponsiveContainer height={400} >
         <ScatterChart 
         margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
@@ -130,6 +132,7 @@ class App extends Component {
         </ScatterChart>
         </ResponsiveContainer>
 
+        </div>
         <EventList events={events} />
         <OfflineAlert text={this.state.OfflineAlertText} />
 
