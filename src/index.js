@@ -1,5 +1,6 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
+import { render } from 'react-dom';
+// import { createRoot } from 'react-dom/client'
 // import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
@@ -8,9 +9,12 @@ import reportWebVitals from './reportWebVitals'
 import * as atatus from 'atatus-spa';
 atatus.config('8e8d8e549d14436693d7909fe42cda16').install();
 
-const container = document.getElementById('root')
+/*const container = document.getElementById('root')
 const root = createRoot(container)
-root.render(<App />)
+root.render(<App />) */
+
+const container = document.getElementById('root');
+render(<App />, container);
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -29,3 +33,5 @@ serviceWorkerRegistration.register()
 reportWebVitals()
 
 atatus.notify(new Error('Test Atatus Setup'));
+
+
