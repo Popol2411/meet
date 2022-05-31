@@ -13,6 +13,7 @@ const getData = () => {
   ).length;
     return { name: genre, value };
   });
+  console.log(data);
 return data;
 };
 setData(() => getData());
