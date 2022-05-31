@@ -66,13 +66,13 @@ class App extends Component {
       {
         numberOfEvents,
       },
-      this.updateEvents(this.state.location, numberOfEvents)
+      this.updateEvents(this.state.currentLocation)
     )
   }
 
-  updateEvents = (location, number = this.state.numberOfEvents) => {
+  updateEvents = (location) => {
     getEvents().then((events) => {
-      if (number !== undefined) {
+      if (this.state.numberOfEvents !== undefined) {
         this.setState({
           numberOfEvents: this.state.numberOfEvents,
         })
