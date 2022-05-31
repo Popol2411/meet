@@ -10,7 +10,7 @@ const getData = () => {
   const data = genres.map((genre) => {
   const value = events.filter(({summary}) =>
       { 
-        console.log('test',summary)
+        console.log('test',summary, summary.indexOf(genre))
        return summary.indexOf(genre) > -1 }
   ).length;
     return { name: genre, value };
