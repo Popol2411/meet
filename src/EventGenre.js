@@ -11,7 +11,7 @@ const getData = () => {
   const value = events.filter(({summary}) =>
       { 
         console.log('test',summary)
-        summary.split(' ').includes(genre) }
+       return summary.split(' ').indexOf(genre) > -1 }
   ).length;
     return { name: genre, value };
   });
