@@ -39,6 +39,7 @@ const colors = ['#A3C4BC', '#BFD7B5', '#E7EFC5', '#F2DDA4', '#F4B393'];
           ))}
         </Pie>
       </PieChart>
+      
     </ResponsiveContainer>
   );
 };
