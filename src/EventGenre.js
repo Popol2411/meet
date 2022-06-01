@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Bar, BarChart } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const EventGenre = ({ events }) => {
   const [data, setData] = useState([]);
@@ -39,17 +39,6 @@ const colors = ['#A3C4BC', '#BFD7B5', '#E7EFC5', '#F2DDA4', '#F4B393'];
           ))}
         </Pie>
       </PieChart>
-
-      <BarChart width={730} height={250} data={data}>
-  <Bar dataKey="value">
-    {
-      data.map((entry, index) => (
-        <Cell key={`cell-${index}`} stroke={colors[index]}  strokeWidth={index === 2 ? 4 : 1}/>
-      ))
-    }
-  </Bar>
-</BarChart>        
-
     </ResponsiveContainer>
   );
 };
