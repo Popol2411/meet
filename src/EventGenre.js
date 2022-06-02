@@ -13,16 +13,12 @@ const getData = () => {
   ).length;
     return { name: genre, value };
   });
-  console.log(data);
-return data;
+  return data;
 };
 setData(() => getData());
 }, [events]);
 
 const formatLabel = (label, percent) => {
-
-
-console.log(label, percent);  
 return percent !== 0 ? label : '';
 }
 
