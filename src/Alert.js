@@ -1,4 +1,4 @@
-import React, { Component, Alert } from 'react';
+import React, { Component } from 'react';
 
 class Alert extends Component {
   constructor(props) {
