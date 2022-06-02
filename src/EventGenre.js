@@ -22,7 +22,7 @@ setData(() => getData());
 const formatLabel = (label, percent) => {
 
 
-console.log(label);  
+console.log(label, percent);  
 return percent !== 0 ? label : '';
 }
 
