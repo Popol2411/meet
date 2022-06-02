@@ -19,6 +19,11 @@ return data;
 setData(() => getData());
 }, [events]);
 
+const formatLabel = (label) => {
+console.log(label)  
+return label
+}
+
 const colors = ['#A3C4BC', '#BFD7B5', '#E7EFC5', '#F2DDA4', '#F4B393'];
 
   return (
@@ -34,7 +39,7 @@ const colors = ['#A3C4BC', '#BFD7B5', '#E7EFC5', '#F2DDA4', '#F4B393'];
         outerRadius={80}
         fill="#8884d8"
         dataKey="value"
-        label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%` }
+        label={({ name, percent }) => formatLabel(`${name} ${(percent * 100).toFixed(0)}%`)}
         >
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index]} />
