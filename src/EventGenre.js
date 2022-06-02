@@ -28,7 +28,7 @@ const colors = ['#A3C4BC', '#BFD7B5', '#E7EFC5', '#F2DDA4', '#F4B393'];
     <ResponsiveContainer height={400} >
 
       <PieChart width={400} height={400}>
-      <Legend layout="vertical" verticalAlign="top" align="right"/>
+      <Legend layout="vertical" verticalAlign="middle" align="right"/>
         <Pie
         data={data}
         cx={200}
