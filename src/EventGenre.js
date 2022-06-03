@@ -25,10 +25,10 @@ return percent !== 0 ? label : '';
 const colors = ['#A3C4BC', '#BFD7B5', '#E7EFC5', '#F2DDA4', '#F4B393'];
 
   return (
-    <ResponsiveContainer height={400} >
+    <ResponsiveContainer height={400} minWidth={400} >
 
       <PieChart width={400} height={400}>
-      <Legend layout="vertical" verticalAlign="middle" align="right"/>
+      <Legend layout="vertical" verticalAlign="top" align="right"/>
         <Pie
         data={data}
         cx={200}
