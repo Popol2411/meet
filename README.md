@@ -161,8 +161,16 @@ Download the repository on your machine
 ```
 https://github.com/Popol2411/meet.git
 ```
+Install dependencies
+```
+npm install
+```
+Deploy the app
+```
+npm run deploy
+```
 
-## :rocket: <a href="https://myflix-popol2411.netlify.app/">Live Demo</a> 
+## :rocket: Live Demo
 
 
 
