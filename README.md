@@ -114,7 +114,7 @@ Given an event element is collapsed by default,
 When the user expands the element,
 Then the user can see the event´s details
 
-Scenario 3: User can collapse an event to hide its details
+### Scenario 3: User can collapse an event to hide its details
 
 Given an event element is expanded,
 When the user collapses the element,
