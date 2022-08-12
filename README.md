@@ -95,20 +95,20 @@ https://github.com/Popol2411/meet.git
 
 
 
-##Scenarios
+## Scenarios
 
-FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS
+### FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS
 
 As a user,
 I should be able to expand or collapse an event,
 So that I can see or hide the event´s details
 
-Scenario 1: An event element is collapsed by default
+#### Scenario 1: An event element is collapsed by default
 
 Given the user has not selected a location or specified a number,
 Then the event element is collapsed by default
 
-Scenario 2: User can expand an event to see its details
+#### Scenario 2: User can expand an event to see its details
 
 Given an event element is collapsed by default,
 When the user expands the element,
