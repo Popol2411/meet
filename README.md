@@ -38,11 +38,15 @@ Meet is an application for users to find events based on their location. It is a
 
 - JavaScript
  
-- [React](https://reactjs.org/), [React-Redux](https://react-redux.js.org/)
+- [React](https://reactjs.org/)
 
-- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [Jest](https://jestjs.io/), [Cucumber](https://cucumber.io/) and [Puppeteer](https://github.com/puppeteer/puppeteer) for Testing
 
-- [Parcel](https://parceljs.org/)
+- [Google Calendar API](https://developers.google.com/calendar/api) and [OAuth2](https://oauth.net/2/)
+
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+
+- [Recharts](https://recharts.org/)
 
 ## :page_with_curl: Technical Requirements
 
@@ -82,18 +86,8 @@ Meet is an application for users to find events based on their location. It is a
 
 Download the repository on your machine 
 ```
-https://github.com/Popol2411/myFlix-client.git
+https://github.com/Popol2411/meet.git
 ```
-Install dependencies
-```
-npm install
-```
-Build the app
-```
-parcel src/index.html
-```
-
-#### Build with [Parcel](https://parceljs.org/) :package:
 
 ## :rocket: <a href="https://myflix-popol2411.netlify.app/">Live Demo</a> 
 
