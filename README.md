@@ -97,7 +97,7 @@ https://github.com/Popol2411/meet.git
 
 ## Scenarios
 
-### FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS
+### Feature 2: Show/Hide an event's details
 
 As a user,
 I should be able to expand or collapse an event,
@@ -121,7 +121,7 @@ When the user collapses the element,
 Then the user can hide the event´s details
 
 
-### FEATURE 3: SPECIFY NUMBER OF EVENTS
+### Feature 3: Specify number of events
 
 As a user,
 I should be able to specify a number of events,
@@ -140,7 +140,7 @@ When the user changes the default number,
 Then the number of events set by the user will be displayed
 
 
-### FEATURE 4: USE THE APP WHEN OFFLINE
+### Feature 4: Use the app when offline
 
 As a developer,
 I should be able to show cached data when there´s no internet connection and show an error when user change settings,
@@ -158,7 +158,7 @@ Given there is no internet connection,
 When the user changes settings,
 Then and error should be displayed
 
-### FEATURE 5: DATA VISUALIZATION
+### Feature 5: Data Visualization
 
 As a user, 
 I should be able to see a chart showing the upcoming events in each city, 
