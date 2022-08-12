@@ -18,7 +18,7 @@ Meet is an application for users to find events based on their location. It is a
 
 ## Scenarios
 
-### - Feature 2: Show/Hide an event's details
+### Feature 2: Show/Hide an event's details
 
 As a user,
 I should be able to expand or collapse an event,
