@@ -37,8 +37,8 @@
 
 .google-icon-wrapper {
   position: absolute;
-  margin-top: 10px;
-  margin-left: 15px;
+  margin-top: 1px;
+  margin-left: 1px;
   width: 40px;
   height: 40px;
   border-radius: 2px;
@@ -46,8 +46,11 @@
 }
 
 .google-icon {
-  width: 58px;
-  height: 58px;
+  position: absolute;
+  margin-top: 11px;
+  margin-left: -8px;
+  width: 18px;
+  height: 18px;
 }
 
 .btn-text {
